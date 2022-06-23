@@ -1,0 +1,13 @@
+trainingInput:
+  hyperparameters:
+    goal: MINIMIZE
+    hyperparameterMetricTag: hpt_loss
+    maxTrials: 6
+    maxParallelTrials: 2
+    enableTrialEarlyStopping: False
+    params:
+    - parameterName: learning_rate
+      type: DOUBLE
+      minValue: 0.00001
+      maxValue: 0.0001
+      scaleType: UNIT_LINEAR_SCALE

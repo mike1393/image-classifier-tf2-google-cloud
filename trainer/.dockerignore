@@ -1,0 +1,13 @@
+cloud-image-classifier-tf2/__pycache__
+cloud-image-classifier-tf2/.gitignore
+cloud-image-classifier-tf2/README.md
+cloud-image-classifier-tf2/requirements.txt
+download/
+venv_tf_latest/
+Credentials/
+.vscode
+.dockerignore
+Dockerfile
+builddockerimage.sh
+config.yaml
+
