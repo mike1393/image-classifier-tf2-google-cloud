@@ -23,7 +23,7 @@ The dataset comes with three folders, Evaluate, Train and Validation. There are 
 <tr>
 <td>
 
-~~~text
+```text
 /food-11
   |_/evaluate
   |   |_/0_1.jpg
@@ -31,12 +31,12 @@ The dataset comes with three folders, Evaluate, Train and Validation. There are 
   |   ...
   |_/training
   |_/validation
-~~~
+```
   
 </td>
 <td>
 
-~~~text
+```text
 /food-11
   |_/evaluate
   |   |_/Bread
@@ -45,8 +45,14 @@ The dataset comes with three folders, Evaluate, Train and Validation. There are 
   |   ...
   |_/training
   |_/validation
-~~~
+```
 
 </td>
 </tr>
 </table>
+
+## Building ML Model
+The deep learning framework I used for this project is TensorFlow. If you are interested in how to use TensorFlow, feel free to check out my other [repo](https://github.com/mike1393/intro-to-tensorflow2.0-python).
+
+Since training a model requires huge amount of data, I used transfer learning. The base model I used is InceptionV3, which trained on Imagenet dataset.
+
