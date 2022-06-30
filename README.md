@@ -16,7 +16,7 @@ The trainer folder contains scripts and dockerfile for the training pipeline. Fo
 The app folder contains the web app for classifing images using the model prediction. For more detail, checkout [app/README.md](app).
 
 ## Cloud Computing
-![Project Flowchart](https://github.com/mike1393/images/blob/main/image_classification_tf2_google_cloud_flowchart.png)
+![Project Flowchart](https://drive.google.com/uc?id=1ChATklAh-Kmp8yv_gIKH9d6g1JxK4vnT)
 
 ## Data
 For simplicity, the dataset I used for this project is food-11, containing 16,643 food images grouped in 11 major food categories. You can download the dataset at [Kaggle](https://www.kaggle.com/datasets/vermaavi/food11), which originates from [EPFL-Food Image Dataset](https://www.epfl.ch/labs/mmspg/downloads/food-image-datasets/).
