@@ -63,4 +63,6 @@ Building a good data pipeline is crusial for effective training. First, we want 
 
 To verify my trainig pipeline, I trained the model locally with a small set of data with small epochs.
 ## Dockerize
-### Argparse
+Since the goal of dockerization is to run the same app everywhere as running locally, there cannot be any hard-coded file path. Hence, before I dockerize the training pipeline, I created argument groups for the trainer using Argparse package.
+
+The Dockerfile for the trainer can be found under ```/trainer```folder. The base image I used was ```tensorflow/tensorflow:latest-gpu``` to make sure the docker environment was set correctly for TensorFlow. I also installed Google Cloud API packages for later use.
