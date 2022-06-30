@@ -1,6 +1,6 @@
 # Trainer
 ## Building ML Model
-The deep learning framework I used for this project is TensorFlow. If you are interested in how to use TensorFlow, feel free to check out my other [repo](https://github.com/mike1393/intro-to-tensorflow2.0-python).
+The deep learning framework I used for this project is TensorFlow. (If you are interested in how to use TensorFlow, feel free to check out my other [repo](https://github.com/mike1393/intro-to-tensorflow2.0-python)).
 
 Since training a model requires massive data, I used transfer learning. The base model I used is InceptionV3 and was set to train on the Imagenet dataset.
 
