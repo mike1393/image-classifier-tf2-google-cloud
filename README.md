@@ -15,7 +15,7 @@ The trainer folder contains scripts and dockerfile for the training pipeline. Fo
 
 The app folder contains the web app for classifing images using the model prediction. For more detail, checkout [app/README.md](app).
 
-## CLoud Computing
+## Cloud Computing
 ![Project Flowchart](https://drive.google.com/uc?id=1ChATklAh-Kmp8yv_gIKH9d6g1JxK4vnT)
 
 ## Data
