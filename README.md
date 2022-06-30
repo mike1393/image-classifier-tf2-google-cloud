@@ -10,10 +10,13 @@ Hence, in this project, I will:
 3. Create a web app that interacts with the model prediction
 4. Deploy the web app through Google Cloud Run.
 
-## Structure of this Repo
-The trainer folder contains scripts and dockerfile for the training pipeline. For more detail, checkout [trainer/README.md](https://github.com/mike1393/image-classifier-tf2-google-cloud/tree/main/trainer).
+## File Structure
+The trainer folder contains scripts and dockerfile for the training pipeline. For more detail, checkout [trainer/README.md](trainer).
 
-The app folder contains the web app for classifing images using the model prediction. For more detail, checkout [app/README.md](https://github.com/mike1393/image-classifier-tf2-google-cloud/tree/main/app).
+The app folder contains the web app for classifing images using the model prediction. For more detail, checkout [app/README.md](app).
+
+## CLoud Computing
+![Project Flowchart](https://drive.google.com/uc?id=1ChATklAh-Kmp8yv_gIKH9d6g1JxK4vnT)
 
 ## Data
 For simplicity, the dataset I used for this project is food-11, containing 16,643 food images grouped in 11 major food categories. You can download the dataset at [Kaggle](https://www.kaggle.com/datasets/vermaavi/food11), which originates from [EPFL-Food Image Dataset](https://www.epfl.ch/labs/mmspg/downloads/food-image-datasets/).
@@ -55,4 +58,5 @@ The dataset comes in three folders, Evaluate, Train, and Validation. There are, 
 </td>
 </tr>
 </table>
+
 
