@@ -1,8 +1,8 @@
 # Image Classifier with TensorFlow2 and Google Cloud Platform
 ## Goal
 The goal of this repo is to learn two things:
-1. How to deploy a neural network model.
-2. How to serve the prediction on the cloud.
+1. How to train a neural network on the cloud.
+2. How to serve the model on the cloud.
 
 Hence, in this project, I will:
 1. Create a training pipeline using transfer learning with a custom dataset.
