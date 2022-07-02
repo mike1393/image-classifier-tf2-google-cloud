@@ -28,43 +28,6 @@ def show_device_log():
     print("[INFO] TensorFlow is running on following devices: ")
     print(device_lib.list_local_devices())
 
-def build_data_pipeline_with_generator(batch_size, path_to_eval, path_to_train, path_to_val):
-    train_augmentor = ImageDataGenerator(
-        rescale=1/255.,
-        rotation_range=25,
-        zoom_range=0.15,
-        width_shift_range=0.2,
-        height_shift_range=0.2,
-        shear_range=0.15,
-        horizontal_flip=True,
-        fill_mode="nearest"
-    )
-    val_augmentor = ImageDataGenerator(
-        rescale=1/255.
-    )
-    train_generator = train_augmentor.flow_from_directory(
-        path_to_train,
-        target_size=(299,299),
-        color_mode='rgb',
-        class_mode='categorical',
-        shuffle=True,
-        batch_size=batch_size)
-    val_generator = val_augmentor.flow_from_directory(
-        path_to_val,
-        target_size=(299,299),
-        color_mode='rgb',
-        class_mode='categorical',
-        shuffle=False,
-        batch_size=batch_size)
-    eval_generator = val_augmentor.flow_from_directory(
-        path_to_eval,
-        target_size=(299,299),
-        color_mode='rgb',
-        class_mode='categorical',
-        shuffle=False,
-        batch_size=batch_size)
-    return train_generator, val_generator, eval_generator
-
 def parse_function(filepath, label):
     img_string = tf.io.read_file(filepath)
     img = tf.image.decode_jpeg(img_string,channels=3)
@@ -138,7 +101,7 @@ def get_callbacks(path_to_save_model):
 
 def zip_model(eval_loss, path_to_saved_model:str):
     current_datetime = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
-    zipped_model_name = f"saved_model_{current_datetime}_loss_{eval_loss}"
+    zipped_model_name = f"loss_{eval_loss}_saved_model_{current_datetime}"
     shutil.make_archive(base_name=zipped_model_name, format='zip',root_dir=path_to_saved_model)
     dirname = os.path.dirname(path_to_saved_model)
     zipped_model_path = os.path.join(dirname, zipped_model_name + '.zip')
