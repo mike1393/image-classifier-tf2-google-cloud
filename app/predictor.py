@@ -15,7 +15,7 @@ FOOD_CLASSES = [
 app = Flask(__name__, static_url_path="/static")
 app.config["IMAGE_UPLOADS"] = "./static"
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = [".JPEG", ".JPG", ".PNG"]
-food_prediction_model = tf.keras.models.load_model("./deeplearning_model")
+food_prediction_model = tf.keras.models.load_model("./savedmodel")
 
 
 def is_allowed_file(filename):

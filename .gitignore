@@ -131,7 +131,7 @@ dmypy.json
 
 #folders
 app/static/*
-app/deeplearning_model/*
+app/savedmodel/*
 trainer/Credentials
 
 #vscode
