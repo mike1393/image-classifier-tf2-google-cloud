@@ -132,7 +132,8 @@ dmypy.json
 #folders
 app/static/*
 app/savedmodel/*
-trainer/Credentials
+Credentials
+
 
 #vscode
 .vscode
