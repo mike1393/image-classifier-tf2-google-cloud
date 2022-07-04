@@ -2,7 +2,6 @@
 from tensorflow.keras.applications import InceptionV3
 from tensorflow.keras import layers
 from tensorflow.keras.models import Model
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.python.client import device_lib
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 import tensorflow as tf
