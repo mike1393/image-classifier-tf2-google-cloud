@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+# Environment
+venv/
+# Docker
+.dockerignore
+Dockerfile
+# git
+README.md

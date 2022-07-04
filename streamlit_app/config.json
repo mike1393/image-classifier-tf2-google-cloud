@@ -1,0 +1,7 @@
+{
+    "TF_CPP_MIN_LOG_LEVEL": "2",
+    "GOOGLE_APPLICATION_CREDENTIALS": "Credentials/sa-private-key.json",
+    "PROJECT": "cloud-image-classifier-tf2",
+    "REGION": "asia-east1",
+    "MODEL": "kaggle_food_11_savedmodel"
+}

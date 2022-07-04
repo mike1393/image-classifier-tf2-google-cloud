@@ -1,10 +1,10 @@
 import tensorflow as tf
 import googleapiclient.discovery
 from google.api_core.client_options import ClientOptions
+import numpy as np
 
 def parse_function(filepath):
-    img_string = tf.io.read_file(filepath)
-    img = tf.image.decode_image(img_string,channels=3)
+    img = tf.image.decode_image(filepath,channels=3)
     img = tf.image.convert_image_dtype(img,tf.float32)
     img = tf.image.resize(img,[299,299])
     img = tf.expand_dims(img, axis=0)
@@ -12,7 +12,13 @@ def parse_function(filepath):
     img = tf.cast(img, tf.int16)
     return img
 
-
+def parse_prediction(probability_list, classes):
+    result = classes[np.argmax(probability_list)]
+    probability_list = np.array(probability_list[0])
+    print(type(probability_list))
+    probability_list = np.round(probability_list*100, 2)
+    confidence = dict(zip(classes, probability_list))
+    return result, confidence
 
 def predict_json(project, region, model, instances, version=None):
     """Send json data to a deployed model for prediction.
