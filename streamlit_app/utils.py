@@ -8,8 +8,6 @@ def parse_function(filepath):
     img = tf.image.convert_image_dtype(img,tf.float32)
     img = tf.image.resize(img,[299,299])
     img = tf.expand_dims(img, axis=0)
-    # Turn tensors into int16 (saves a lot of space, ML Engine has a limit of 1.5MB per request)
-    img = tf.cast(img, tf.int16)
     return img
 
 def parse_prediction(probability_list, classes):
